@@ -19,7 +19,7 @@
     "backup": "node scripts/backup.js"
   },
   "dependencies": {
-    "acme-client": "4.2.5",
+    "acme-client": "5.4.0",
     "https-proxy-agent": "7.0.6",
     "meshcentral": "1.2.5"
   },
