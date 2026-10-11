@@ -1,0 +1,15 @@
+:root { --gama-blue:#175cda; --gama-ink:#10223d; }
+body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+#masthead { background:linear-gradient(110deg,#0d1b2e,#163f6b); color:white; }
+.title { font-weight:750; letter-spacing:-.04em; }
+input[type=button],input[type=submit],button { border-radius:6px; }
+.gama-help { position:fixed; bottom:8px; left:8px; z-index:500; background:#10223d; color:white; padding:7px 10px; border-radius:8px; font-size:12px; text-decoration:none; }
+.gama-controls { position:fixed; z-index:1000; bottom: max(12px,env(safe-area-inset-bottom)); right:10px; width:min(340px,calc(100vw - 20px)); color:#f2f6ff; background:#10223df5; border:1px solid #5684b2; border-radius:14px; box-shadow:0 6px 32px #0006; }
+.gama-controls summary { padding:14px; cursor:pointer; font-weight:650; }
+.gama-controls>div { display:flex; flex-wrap:wrap; gap:6px; padding:0 10px 10px; max-height:45vh; overflow-y:auto; }
+.gama-controls button { flex:1 0 29%; min-height:44px; padding:8px; background:#213e60; color:white; border:1px solid #52789d; font-size:13px; }
+.gama-controls button[aria-pressed=true] { background:#175cda; }
+.gama-controls p { font-size:12px; margin:4px; line-height:1.5; }
+.gama-controls[hidden] { display:none; }
+.gama-touch { touch-action:none; }
+@media (max-width:600px) { input[type=text],input[type=password] { font-size:16px; } }

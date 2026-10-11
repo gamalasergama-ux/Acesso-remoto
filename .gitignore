@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+var/
+meshcentral-data/
+meshcentral-files/
+meshcentral-backups/
+*.log
+*.bak
+*.pem
+*.key
+*.pfx
+*.msh
+*.exe
+coverage/
+test-results/

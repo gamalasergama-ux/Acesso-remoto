@@ -1,0 +1,24 @@
+services:
+  gama-remote:
+    build: .
+    init: true
+    restart: unless-stopped
+    environment:
+      GAMA_HOME: /app/var
+    ports:
+      - "${GAMA_BIND_ADDRESS:-127.0.0.1}:443:8443"
+      - "${GAMA_BIND_ADDRESS:-127.0.0.1}:80:8080"
+    volumes:
+      - gama-remote-data:/app/var
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    stop_grace_period: 30s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  gama-remote-data:
